@@ -99,7 +99,7 @@ def main():
             codeformer=codeformer,
             esrgan=esrgan,
             free_gpu_mem=opt.free_gpu_mem,
-            safety_checker=opt.safety_checker,
+            safety_checker=False,
             max_loaded_models=opt.max_loaded_models,
             )
     except (FileNotFoundError, TypeError, AssertionError):
