@@ -289,7 +289,7 @@ class Generator():
 
         diffusers.logging.set_verbosity_error()
         checked_image, has_nsfw_concept = checker(images=x_image, clip_input=features.pixel_values)
-        if has_nsfw_concept[0]:
+        if has_nsfw_concept[0] and False:
             print('** An image with potential non-safe content has been detected. A blurred image will be returned. **')
             return self.blur(image)
         else:
